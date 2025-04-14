@@ -14,7 +14,7 @@
    <h2>
    <?php
       if(isset($_POST["konversi"])){
-         if(empty($_POST["nilai"])){
+         if(trim($_POST["nilai"]) == ""){
             echo "Input nilai masih kosong!";
             exit();
          }

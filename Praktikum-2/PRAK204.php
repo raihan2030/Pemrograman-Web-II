@@ -43,7 +43,7 @@
             echo "Ratusan";
          }
          else{
-            echo "Anda Menginput Melebihi Limit bilangan";
+            echo "Anda Menginput Melebihi Limit Bilangan";
          }
       }
    ?>

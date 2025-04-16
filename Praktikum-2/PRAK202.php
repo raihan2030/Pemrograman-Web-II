@@ -46,8 +46,5 @@
       ?>
    </form>
 
-   <?php
-      
-   ?>
 </body>
 </html>

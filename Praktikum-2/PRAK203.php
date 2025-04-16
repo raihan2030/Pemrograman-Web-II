@@ -25,7 +25,7 @@
    <?php 
       if(isset($_POST["konversi"])){
          $nilai = 0.0;
-         if(empty($_POST["nilai"])){
+         if(trim($_POST["nilai"]) === ""){
             echo "Input nilai masih kosong!";
             exit();
          }
@@ -53,60 +53,29 @@
          }
 
          if($pilihanAsal === "celcius"){
-            if($pilihanHasil === "fahrenheit"){
-               echo 9/5 * $nilai + 32 . " °F";
-            }
-            else if($pilihanHasil === "reamur"){
-               echo 4/5 * $nilai . " °R";
-            }
-            else if($pilihanHasil === "kelvin"){
-               echo $nilai + 273.15 . " K";
-            }
-            else {
-               echo $nilai . " °C";
-            }
+            $nilai = $nilai;
          }
          else if($pilihanAsal === "fahrenheit"){
-            if($pilihanHasil === "celcius"){
-               echo ($nilai - 32) / 1.8 . " °C";
-            }
-            else if($pilihanHasil === "reamur"){
-               echo ($nilai - 32) / 2.25 . " °R";
-            }
-            else if($pilihanHasil === "kelvin"){
-               echo ($nilai + 459.67) / 1.8 . " K";
-            }
-            else{
-               echo $nilai . " °F";
-            }
+            $nilai = ($nilai - 32) / 1.8;
          }
          else if($pilihanAsal === "reamur"){
-            if($pilihanHasil === "celcius"){
-               echo $nilai * 1.25 . " °C";
-            }
-            else if($pilihanHasil === "fahrenheit"){
-               echo $nilai * 2.25 + 32 . " °F";
-            }
-            else if($pilihanHasil === "kelvin"){
-               echo $nilai * 1.25 + 273.15 . " K";
-            }
-            else{
-               echo $nilai . " °R";
-            }
+            $nilai = $nilai * 1.25;            
          }
          else{
-            if($pilihanHasil === "celcius"){
-               echo $nilai - 273.15 . " °C";
-            }
-            else if($pilihanHasil === "fahrenheit"){
-               echo $nilai * 1.8 - 459.67 . " °F";
-            }
-            else if($pilihanHasil === "reamur"){
-               echo ($nilai - 273.15) * 0.8 . " °R";
-            }
-            else{
-               echo $nilai . " K";
-            }
+            $nilai = $nilai - 273.15;            
+         }
+
+         if($pilihanHasil === "celcius"){
+            echo $nilai . " °C";
+         }
+         else if($pilihanHasil === "fahrenheit"){
+            echo $nilai * 1.8 + 32 . " °F";
+         }
+         else if($pilihanHasil === "reamur"){
+            echo $nilai * 0.8 . " °R";
+         }
+         else{
+            echo $nilai + 273.15 . " K";
          }
       }
 

@@ -31,11 +31,10 @@ if(isset($_POST['kurang'])){
       Jumlah Bintang: <?= $_SESSION['bintang']?><br><br>
       <?php 
       for ($i=0; $i < $_SESSION['bintang']; $i++) { 
-         echo "<img src='assets/star-images-9441.png' width='40px'/>";
+         echo "<img src='assets/star-images-9441.png' width='50px'/>";
       }
       ?>
       <form action="" method="post">
-         <!-- <input type="hidden" name="currentBintang" value="<?= $bintang?>"> -->
          <button type='submit' name='tambah'>Tambah</button>
          <button type='submit' name='kurang'>Kurang</button>
       </form>

@@ -1,3 +1,13 @@
+<?php
+$panjang = $lebar = $nilai = "";
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $panjang = $_POST['panjang'];
+    $lebar = $_POST['lebar'];
+    $nilai = $_POST['nilai'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,17 +23,14 @@
 </head>
 <body>
     <form action="" method="post">
-        Panjang: <input type="number" name="panjang" id="panjang"><br>
-        Lebar: <input type="number" name="lebar" id="lebar"><br>
-        Nilai: <input type="text" name="nilai" id="nilai"><br>
+        Panjang: <input type="number" name="panjang" id="panjang" value="<?= $panjang?>"><br>
+        Lebar: <input type="number" name="lebar" id="lebar" value="<?= $lebar?>"><br>
+        Nilai: <input type="text" name="nilai" id="nilai" value="<?= $nilai?>"><br>
         <button type="submit">Cetak</button><br><br>
     </form>
 
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $panjang = $_POST['panjang'];
-        $lebar = $_POST['lebar'];
-        $nilai = $_POST['nilai'];
         $arrayNilai = explode(" ", $nilai);
 
         if($panjang == $lebar) {

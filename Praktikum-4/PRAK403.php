@@ -10,7 +10,7 @@ $arrayData = [
         "No" => 2, 
         "Nama" => "Ratna",
         "Mata Kuliah" => ["Basis Data I", "Praktikum Basis Data I", "Kalkulus"],
-        "SKS" => [2, 1, 3],
+        "SKS" => [2, 1, 3]
     ],
     [
         "No" => 3, 

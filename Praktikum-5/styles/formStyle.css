@@ -5,6 +5,7 @@
 body{
     display: flex;
     justify-content: center;
+    font-family: sans-serif;
 }
 #form-container {
     margin-top: 5em;
@@ -16,7 +17,7 @@ body{
     border-radius: 20px;
 }
 #add-form {
-    margin-top: 5px;
+    margin-top: 15px;
 }
 #add-form button {
     padding: 7px;
@@ -34,8 +35,8 @@ body{
     text-decoration: none;
     color: white;
     border: none;
-    font-family: sans-serif;
     font-size: 15px;
+    font-weight: bold;
     border-radius: 7px;
 }
 .back-add-btn:hover {

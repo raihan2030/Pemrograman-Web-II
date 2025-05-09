@@ -8,7 +8,7 @@ body{
     font-family: sans-serif;
 }
 #container{
-    width: 75%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,6 +24,7 @@ body{
     padding: 10px;
     border-radius: 5px;
     background-color: blue;
+    font-weight: bold;
 }
 .add-back-btn:hover {
     transition: 0.3s;
@@ -44,6 +45,7 @@ th {
 .opt-container {
     display: flex;
     gap: 10px;
+    justify-content: center;
 }
 .opt-btn {
     padding: 10px 15px;

@@ -55,4 +55,10 @@ function deleteData(PDO $conn, string $tableName, int $id){
 
     $query = $conn->prepare("DELETE FROM `$tableName` WHERE `$idColumn` = ?");
     $query->execute([$id]);
+
+    $query2 = $conn->query("SELECT COUNT(*) FROM `$tableName`");
+    $rowCount = $query2->fetchColumn();
+    if($rowCount == 0){
+        $conn->query("ALTER TABLE `$tableName` AUTO_INCREMENT = 1");
+    }
 }

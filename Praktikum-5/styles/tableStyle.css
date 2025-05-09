@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+}
+#container{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+}
+#add-back-container {
+    display: flex;
+    justify-content: space-between;
+}
+.add-back-btn {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: blue;
+}
+.add-back-btn:hover {
+    transition: 0.3s;
+    background-color: lightgray;
+    color: black;
+}
+#data-table {
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid gray;
+    padding: 10px 25px;
+}
+th {
+    background-color: cyan;
+}
+.opt-container {
+    display: flex;
+    gap: 10px;
+}
+.opt-btn {
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 7px;
+    cursor: pointer;
+    border: none;
+}
+.opt-btn:hover {
+    transition: 0.3s;
+    background-color: lightgray;
+    color: black;
+}
+.edit-btn {
+    background-color: yellow;
+    color: black;
+}
+.delete-btn {
+    background-color: red;
+    color: white;
+}

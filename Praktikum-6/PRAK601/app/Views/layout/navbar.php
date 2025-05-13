@@ -4,10 +4,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item me-3">
-                    <a class="nav-link active" aria-current="page" href="<?= base_url('/home'); ?>">Home</a>
+                    <a class="nav-link <?php if($title == 'Home') {echo 'active';} ?>" aria-current="page" href="<?= base_url('/home'); ?>">Home</a>
                 </li>
                 <li class="nav-item me-3">
-                    <a class="nav-link" href="<?= base_url('/about'); ?>">About</a>
+                    <a class="nav-link <?php if($title == 'About Me') {echo 'active';} ?>" href="<?= base_url('/about'); ?>">About</a>
                 </li>
             </ul>
         </div>

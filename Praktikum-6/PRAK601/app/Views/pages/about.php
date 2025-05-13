@@ -1,7 +1,7 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
-<div class="container mt-2">
+<div class="container mt-4">
     <div class="row">
         <div class="col">
             <div class="row py-3">
